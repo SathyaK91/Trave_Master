@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+<head>
+  <meta charset="utf-8" />
+  <title> </title>
+  <meta name="description" content=" " />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="libs/assets/animate.css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="libs/assets/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="libs/assets/simple-line-icons/css/simple-line-icons.css" type="text/css" />
+  <link rel="stylesheet" href="libs/jquery/bootstrap/dist/css/bootstrap.css" type="text/css" />
+   <link rel="stylesheet" href="css/font.css" type="text/css" />
+  <link rel="stylesheet" href="css/app.css" type="text/css" />
+
+</head>
+<body>
+<div class="app app-header-fixed ">
+  
+
+  <!-- header -->
+  <header id="header" class="app-header navbar" role="menu">
+       <div class="navbar-header bg-dark">
+        <button class="pull-right visible-xs dk" ui-toggle-class="show" target=".navbar-collapse">
+          <i class="glyphicon glyphicon-cog"></i>
+        </button>
+        <button class="pull-right visible-xs" ui-toggle-class="off-screen" target=".app-aside" ui-scroll="app">
+          <i class="glyphicon glyphicon-align-justify"></i>
+        </button>
+        <!-- brand -->
+        <a href="#/" class="navbar-brand text-lt">
+           <span class="hidden-folded m-l-xs">Logo</span>
+        </a>
+        <!-- / brand -->
+      </div>
+       <div class="collapse pos-rlt navbar-collapse box-shadow bg-white-only">
+         <div class="nav navbar-nav hidden-xs">
+         </div>
+          <!--<ul class="nav navbar-nav hidden-sm">
+        </ul>-->
+         <ul class="nav navbar-nav navbar-right">
+		  <!-- search form -->
+        <form class="navbar-form navbar-form-sm navbar-left shift" ui-shift="prependTo" data-target=".navbar-collapse" role="search" ng-controller="TypeaheadDemoCtrl">
+          <div class="form-group">
+            <div class="input-group">
+              <input type="text" ng-model="selected" typeahead="state for state in states | filter:$viewValue | limitTo:8" class="form-control input-sm bg-light no-border rounded padder" placeholder="Search projects...">
+              <span class="input-group-btn">
+                <button type="submit" class="btn btn-sm bg-light rounded"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+          </div>
+        </form>
+			
+          <li class="dropdown">
+             <a href="#">
+              <i class="icon-bell fa-fw"></i>
+             </a>
+          </li>
+		   <li class="dropdown">
+             <a href="#">
+              <i class="icon-envelope fa-fw"></i>
+             </a>
+          </li>
+		  <li class="dropdown">
+             <a href="#">
+              <i class="icon-user fa-fw"></i>
+             </a>
+          </li>
+		  <li class="dropdown">
+             <a href="#">
+              <i class="icon-power fa-fw"></i>
+             </a>
+          </li>
+           
+        </ul>
+         
+      </div>
+   </header>
+  <!-- / header -->
+
+
+    <!-- aside -->
+  <aside id="aside" class="app-aside hidden-xs bg-dark">
+      <div class="aside-wrap">
+        <div class="navi-wrap">
+           <!-- nav -->
+          <nav ui-nav class="navi clearfix">
+            <ul class="nav">
+			  <li>
+                <a href class="auto">      
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                   <i class="glyphicon glyphicon-dashboard"></i>
+                   <span>Dashboard</span>
+                </a>
+              </li>
+			  <li class="active">
+                <a href class="auto " >      
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                   <i class="glyphicon glyphicon-briefcase"></i>
+                   <span>Packages</span>
+                </a>
+              </li>
+			  
+              <li>
+                <a href class="auto">      
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                   <i class="glyphicon glyphicon-user"></i>
+                   <span>Lead</span>
+                </a>
+              </li>
+			  <li>
+                <a href class="auto">      
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                   <i class="fa fa-group"></i>
+                   <span>Customers</span>
+                </a>
+              </li>
+			  <li>
+                <a href class="auto">      
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                   <i class="fa  fa-ticket"></i>
+                   <span>Booking</span>
+                </a>
+              </li>
+			  <li>
+                <a href class="auto">      
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                   <i class="glyphicon glyphicon-th"></i>
+                   <span>Billing</span>
+                </a>
+              </li>
+			  <li>
+                <a href class="auto">      
+                  <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                  </span>
+                   <i class="fa fa-cc "></i>
+                   <span>Payment</span>
+                </a>
+              </li>
+              </ul>
+          </nav>
+          <!-- nav -->
+
+          
+        </div>
+      </div>
+  </aside>
+  <!-- / aside -->
+
+
+  <!-- content -->
+  <div id="content" class="app-content" role="main">
+  	<div class="app-content-body ">
+	    
+
+<div class="bg-light lter b-b wrapper-md">
+  <h4><b>PACKAGE</b></h4>
+  <div class="row">
+  	<div class="col-md-6"></div>
+	<div class="col-md-6"></div>
+  </div>
+</div>
+
+
+<div class="wrapper-md" ng-controller="FormDemoCtrl">
+  <div class="row">
+    <div class="col-sm-8">
+      <div class="panel panel-default">
+         <div class="panel-body">
+          <form role="form">
+            <div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+					  <select class="form-control" id="packagename">
+						<option>Package Name</option>
+						<option>Package 1 </option>
+						<option>Package 2</option>
+					  </select>
+					</div>
+				</div>
+				<div class="col-sm-6">
+						<div class="col-sm-2">
+							<div style="padding-top:10px;">Type</div>	 
+						</div>
+						<div class="col-sm-4">
+							<div class="form-group">
+							 <div class="radio">
+							  <label class="i-checks i-checks-sm">
+								<input name="a" type="radio">
+								<i></i>
+								Fixed
+							  </label>
+							</div>
+							</div>
+						</div>
+						<div class="col-sm-5">
+							<div class="radio">
+							  <label class="i-checks i-checks-sm">
+								<input name="a" type="radio">
+								<i></i>
+								Not Fixed
+							  </label>
+							</div>
+						</div>
+				</div>
+		    </div>	
+ 			<div class="row">
+			   <div class="col-sm-6">
+						<div class="col-sm-2">
+							<div style="padding-top:10px;">Mode</div>	 
+						</div>
+						<div class="col-sm-4">
+							<div class="form-group">
+							 <div class="radio">
+							  <label class="i-checks i-checks-sm">
+								<input name="a" type="radio">
+								<i></i>
+								Active
+							  </label>
+							</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="radio">
+							  <label class="i-checks i-checks-sm">
+								<input name="a" type="radio">
+								<i></i>
+								Inactive
+							  </label>
+							</div>
+						</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+					   <div class="input-group ">
+              			 <span class="input-group-btn">
+							<button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+						  </span>
+			  	<input class="form-control" datepicker-popup="" ng-model="dt" is-open="opened" datepicker-options="dateOptions" placeholder="Departure Date" ng-required="true" close-text="Close" type="text">
+             
+           				 </div>
+					</div>
+				</div>
+  		    </div>	
+ 			<div class="row">
+			    <div class="col-sm-3">
+					<div class="form-group">
+					  <input class="form-control" type="text"  name="days" placeholder="Days" />
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="form-group">
+					   <input class="form-control" type="text"  name="nights" placeholder="Nights" />  
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+					   <div class="input-group ">
+              			 <span class="input-group-btn">
+							<button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+						  </span>
+			  	<input class="form-control" datepicker-popup="" ng-model="dt" is-open="opened" datepicker-options="dateOptions" placeholder="Arrival Date" ng-required="true" close-text="Close" type="text">
+             
+           				 </div>
+					</div>
+				</div>
+  		    </div>
+ 			<div class="row">
+				<div class="col-sm-6">
+					<div class="form-group">
+					  <select class="form-control" id="seats">
+						<option>Total No.of Seats</option>
+						<option>1 </option>
+						<option>2</option>
+					  </select>
+					</div>
+				</div>
+				 <div class="col-sm-6">
+					<div class="form-group">
+					  <select class="form-control" id="travelmode">
+						<option>Travel Mode</option>
+						<option>-</option>
+						<option>-</option>
+					  </select>
+					</div>
+				</div>
+		    </div>
+ 			<div class="row" >
+				<div class="line-md">&nbsp;</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+					  <label><b>PLACES</b></label>
+					  <select class="form-control" id="seats">
+						<option>Place Name</option>
+						<option>1 </option>
+						<option>2</option>
+					  </select>
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+					<label>&nbsp;</label>
+					  <input type="text" placeholder="Package Cost Per Person" class="form-control" />
+					</div>
+				</div>
+				<div class="line-md">&nbsp;</div>
+		    </div>
+			<div class="row" >
+ 				<div class="col-sm-12" style="text-align:center">
+					 <button type="submit" class="btn btn-md btn-black">Submit</button>
+					 <button type="submit" class="btn btn-md btn-black">Reset</button>
+ 				</div>
+			</div>
+				 
+          </form>
+        </div>
+      </div>
+    </div>
+   </div>
+ </div>
+ 	</div>
+  </div>
+ 
+
+
+
+</div>
+
+<script src="libs/jquery/jquery/dist/jquery.js"></script>
+<script src="libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
+<script src="js/ui-load.js"></script>
+<script src="js/ui-jp.config.js"></script>
+<script src="js/ui-jp.js"></script>
+<script src="js/ui-nav.js"></script>
+<script src="js/ui-toggle.js"></script>
+<script src="js/ui-client.js"></script>
+
+</body>
+</html>
